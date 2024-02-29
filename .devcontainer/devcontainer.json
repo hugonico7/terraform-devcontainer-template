@@ -1,0 +1,35 @@
+{   
+    "name": "npm-italy-kernel-iac",
+    "build":{
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "mounts": [
+        {
+            "source": "/Users/Hugo/.ssh",
+            "target": "/root/.ssh",
+            "type": "bind"
+        },
+        {
+            "source": "/Users/Hugo/.aws",
+            "target": "/root/.aws",
+            "type": "bind"
+        }
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "oderwat.indent-rainbow",
+                "amazonwebservices.aws-toolkit-vscode",
+                "PKief.material-icon-theme",
+                "vscodevim.vim",
+                "ms-azuretools.vscode-docker",
+                "GitHub.copilot-chat",
+                "GitHub.copilot",
+                "github.vscode-github-actions",
+                "hashicorp.terraform"
+            ]
+        }
+    }
+}
